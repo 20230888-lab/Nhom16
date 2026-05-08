@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Hệ thống tuyển sinh</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    {% include 'client/header.html' %}
+
+    {% block content %}{% endblock %}
+
+    {% include 'client/footer.html' %}
+</body>
+</html>

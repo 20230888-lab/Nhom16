@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="form-box">
+
+        <!-- TAB -->
+        <div class="tabs">
+
+            <button class="tab-btn active"
+                    onclick="showLogin()">
+                Đăng nhập
+            </button>
+
+            <button class="tab-btn"
+                    onclick="showRegister()">
+                Đăng ký
+            </button>
+
+        </div>
+
+        <!-- LOGIN -->
+        <div id="login-form">
+
+            <h2>ĐĂNG NHẬP</h2>
+
+            <form method="POST">
+
+                <input type="text"
+                       name="username"
+                       placeholder="Tên đăng nhập">
+
+                <input type="password"
+                       name="password"
+                       placeholder="Mật khẩu">
+
+                <button type="submit">
+                    ĐĂNG NHẬP
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- REGISTER -->
+        <div id="register-form">
+
+            <h2>ĐĂNG KÝ</h2>
+
+            <form action="/register"
+                  method="POST">
+
+                <input type="text"
+                       name="username"
+                       placeholder="Tên đăng nhập">
+
+                <input type="password"
+                       name="password"
+                       placeholder="Mật khẩu">
+
+                <button type="submit">
+                    ĐĂNG KÝ
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+function showLogin(){
+
+    document.getElementById("login-form").style.display = "block";
+
+    document.getElementById("register-form").style.display = "none";
+
+    document.querySelectorAll(".tab-btn")[0]
+            .classList.add("active");
+
+    document.querySelectorAll(".tab-btn")[1]
+            .classList.remove("active");
+}
+
+function showRegister(){
+
+    document.getElementById("login-form").style.display = "none";
+
+    document.getElementById("register-form").style.display = "block";
+
+    document.querySelectorAll(".tab-btn")[1]
+            .classList.add("active");
+
+    document.querySelectorAll(".tab-btn")[0]
+            .classList.remove("active");
+}
+
+</script>
+
+</body>
+</html>

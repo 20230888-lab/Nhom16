@@ -1,0 +1,46 @@
+<header>
+    <div class="header-top">
+       <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
+   
+    </div>
+
+
+ <nav class="navbar">
+        <ul>
+            <li><a href="/ve-chung-toi">Về chúng tôi</a></li>
+
+            <li>
+                <li><a href="/tuyen-sinh">Tuyển sinh</a></li>
+                <ul>
+                    <li><a href="#">Thông tin tuyển sinh</a></li>
+                    <li><a href="#">Học phí</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Hệ đào tạo</a></li>
+            <li><a href="#">Chương trình đào tạo</a></li>
+            <li><a href="#">Nghiên cứu</a></li>
+            <li><a href="#">Hợp tác quốc tế</a></li>
+            <li><a href="#">Liên hệ</a></li>
+            {% if session.get('user_id') %}
+{% if session.get('role') == 'admin' %}
+
+<li>
+    <a href="/admin">Quản trị</a>
+</li>
+
+{% endif %}
+    <li>
+        <a href="{{ url_for('logout') }}">Đăng xuất</a>
+    </li>
+
+{% else %}
+
+    <li>
+        <a href="{{ url_for('login') }}">Đăng nhập</a>
+    </li>
+
+{% endif %}
+        </ul>
+    </nav>
+</header>

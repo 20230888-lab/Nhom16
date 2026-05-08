@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'client/layout.html' %}
+
+{% block content %}
+
+<!-- HERO BANNER -->
+<section class="hero">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            
+        </div>
+    </div>
+</section>
+
+<!-- INFO BAR -->
+<section class="info-bar">
+    <div>📞 024.3555.2008</div>
+    <div>🌐 https://eaut.edu.vn</div>
+    <div>📍 Trịnh Văn Bô, Nam Từ Liêm, Hà Nội</div>
+</section>
+
+<!-- BUTTON -->
+<!--<section class="mission">
+    <button>VÌ SAO NÊN CHỌN EAUT?</button>
+</section>
+<!-- WHY CHOOSE -->
+<section class="why">
+    <h2 class="why-title">VÌ SAO NÊN CHỌN EAUT?</h2>
+
+    <div class="why-container">
+
+        <!-- LEFT -->
+        <div class="why-left">
+            <h3>Ưu đãi quà tặng đặc biệt</h3>
+            <p>
+                Học phí chỉ từ 11.000.000 vnđ/kỳ học. Miễn phí 6 tháng ký túc xá.
+                Miễn phí 1 năm tập Gym & Yoga. Miễn phí các lớp học giao tiếp Tiếng Anh,
+                Tiếng Nhật, Tiếng Hàn...
+            </p>
+
+            <img src="{{ url_for('static', filename='images/THUVIEN.webp') }}">
+             <h3>Ước mơ du học nước ngoài</h3>
+            <p>
+               Cơ hội thực tập Nhật Bản, Ba Lan, UK, Australia…: chương trình 2+2, 3+1; Cơ hội tham gia các chương trình trao đổi sinh viên quốc tế; Tham gia các chương trình thực tập hưởng lương.
+Trường hợp tác du học với các đối tác lớn: Curtin University, Perth, Western Australia, Universityof South Australia, Adelaide-South Australia, Deakin University, Melbourne, Victoria, University of Technology Sydney, Sydney, New South Wales (Australia), University of Bedfordshire (UK), Luton (UK), Vistula (Ba Lan)…
+            </p>
+             <h3>Môi trường năng động</h3>
+            <p>
+                Hoạt động CLB sinh viên sôi nổi: CLB Tin học, CLB Tiếng Anh, CLB Võ thuật, CLB bóng rổ, CLB Bóng đá, CLB Bóng chuyền, CLB Dancing,…
+Sinh viên thường xuyên tham giá các cuộc thi trong và ngoài trường: Robocon, Miss EAUT, Rung chuông vàng EAUT, EAUT’s Got Talent, Cuộc thi Tiếng Anh, Giải bóng đá cụm công nghiệp Từ Liêm,…
+Đoàn Thanh niên, Hội sinh viên tổ chức các hoạt động đoàn thể quanh năm cho sinh viên: Tiếp sức mùa thi, Đông ấm vùng cao, Phát cơm tình nguyện, Đạp xe xuyên phố, Chuỗi hoạt động chào tân sinh viên, Chuỗi hoạt động 26/03,…
+            </p>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="why-right">
+
+            <div class="box">
+                <h4>Cơ sở vật chất hiện đại</h4>
+                <p>
+                   Không gian học tập hiện đại gồm các phòng học máy chiếu, điều hoà nhiệt độ hai chiều, hệ thống chiếu sáng, thang máy…
+Phòng thực hành thí nghiệm do Tập đoàn ROCK-WELL và tập đoàn SIEMENS tài trợ, gồm các thiết bị điều khiển, thực hành tự động hoá tối tân nhất.
+                </p>
+            </div>
+
+            <div class="box">
+                <h4>1000+ suất học bổng</h4>
+                <ul>
+                    <li>🎁 Học bổng 100% học phí</li>
+                    <li>🎁 Học bổng 50% - 70%</li>
+                    <li>🎁 Học bổng quốc tế</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h4>Cơ hội việc làm</h4>
+                <p>
+                   Cung cấp các cơ hội việc làm cho sinh viên khi đi học và sau khi tốt nghiệp. Đặc biệt đảm bảo đầu ra cho các ngành đào tạo của trường.
+Đối tác của trường Đại học Công nghệ Đông Á:
+– Hợp tác việc làm: Polyco, Sabeco, GOLDEN GATE, Paris Gateaux, Công ty Á Long & Bảo Ngọc, Tập đoàn CMC,Viện Đào tạo nhân lực ngân hàng Việt Nam (Vietnam Bankers).
+– Trao tặng thiết bị thực hành: Rockwell (Mỹ), Siemens (Đức), Mycom (Nhật Bản), Alfa Laval (Thụy Điển), Endress+Hauser (Thụy Sỹ),…
+
+                </p>
+            </div>
+           <img src="{{ url_for('static', filename='images/totnghiep.webp') }}">
+
+        </div>
+    </div>
+</section>
+<!-- NGÀNH ĐÀO TẠO -->
+<section class="nganh">
+    
+    <!-- KHỐI 1 -->
+    <div class="nganh-row">
+        
+        <!-- ẢNH -->
+        <div class="nganh-img">
+            <h3>KHỐI NGÀNH KỸ THUẬT</h3>
+            <img src="{{ url_for('static', filename='images/kythuat.webp') }}">
+        </div>
+
+        <!-- BẢNG -->
+        <div class="nganh-table">
+            <table>
+                <tr>
+                    <th>CÁC NGÀNH ĐÀO TẠO</th>
+                    <th>MÃ NGÀNH</th>
+                    <th>TỔ HỢP XÉT TUYỂN</th>
+                </tr>
+
+                <tr>
+                    <td>Công nghệ thông tin</td>
+                    <td>7480201</td>
+                    <td rowspan="6">A00, A01, C01, D01</td>
+                </tr>
+                <tr><td>Công nghệ ô tô</td><td>7510205</td></tr>
+                <tr><td>Cơ khí</td><td>7510202</td></tr>
+                <tr><td>Điện - Điện tử</td><td>7510301</td></tr>
+                <tr><td>Tự động hóa</td><td>7510303</td></tr>
+                <tr><td>Xây dựng</td><td>7580201</td></tr>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- KHỐI 2 -->
+    <div class="nganh-row reverse">
+        
+        <!-- BẢNG -->
+        <div class="nganh-table">
+            <table>
+                <tr>
+                    <th>CÁC NGÀNH ĐÀO TẠO</th>
+                    <th>MÃ NGÀNH</th>
+                    <th>TỔ HỢP</th>
+                </tr>
+
+                <tr>
+                    <td>Quản trị kinh doanh</td>
+                    <td>7340101</td>
+                    <td rowspan="6">A00, A01, C00, D01</td>
+                </tr>
+                <tr><td>Marketing</td><td>7340101</td></tr>
+                <tr><td>Du lịch</td><td>7810103</td></tr>
+                <tr><td>Tài chính</td><td>7340201</td></tr>
+                <tr><td>Kế toán</td><td>7340301</td></tr>
+                <tr><td>Ngôn ngữ Anh</td><td>7220201</td></tr>
+            </table>
+        </div>
+
+        <!-- ẢNH -->
+        <div class="nganh-img">
+            <h3>KHỐI NGÀNH KINH TẾ - XÃ HỘI</h3>
+            <img src="{{ url_for('static', filename='images/kinhte.jpg') }}">
+        </div>
+
+    </div>
+
+</section>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,49 @@
+{% extends 'admin/layout.html' %}
+
+{% block content %}
+
+<h1>Quản lý hồ sơ thí sinh</h1>
+
+<table>
+
+    <tr>
+
+        <th>ID</th>
+
+        <th>Họ tên</th>
+
+        <th>Ngành</th>
+
+        <th>Trạng thái</th>
+
+        <th>Chức năng</th>
+
+    </tr>
+
+    <tr>
+
+        <td>1</td>
+
+        <td>Nguyễn Văn A</td>
+
+        <td>CNTT</td>
+
+        <td>Chờ duyệt</td>
+
+        <td>
+
+            <button class="btn btn-edit">
+                Duyệt
+            </button>
+
+            <button class="btn btn-delete">
+                Từ chối
+            </button>
+
+        </td>
+
+    </tr>
+
+</table>
+
+{% endblock %}

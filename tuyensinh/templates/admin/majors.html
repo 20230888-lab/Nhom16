@@ -1,0 +1,53 @@
+{% extends 'admin/layout.html' %}
+
+{% block content %}
+
+<h1>Quản lý ngành học</h1>
+
+<button class="btn btn-add">
+    Thêm ngành
+</button>
+
+<table>
+
+    <tr>
+
+        <th>ID</th>
+
+        <th>Tên ngành</th>
+
+        <th>Chỉ tiêu</th>
+
+        <th>Mô tả</th>
+
+        <th>Chức năng</th>
+
+    </tr>
+
+    <tr>
+
+        <td>1</td>
+
+        <td>Công nghệ thông tin</td>
+
+        <td>200</td>
+
+        <td>Ngành CNTT</td>
+
+        <td>
+
+            <button class="btn btn-edit">
+                Sửa
+            </button>
+
+            <button class="btn btn-delete">
+                Xóa
+            </button>
+
+        </td>
+
+    </tr>
+
+</table>
+
+{% endblock %}
